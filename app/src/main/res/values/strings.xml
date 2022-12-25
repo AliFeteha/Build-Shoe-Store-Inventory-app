@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcomeText1" translatable="false">Welcome!</string>
+    <string name="welcomeText2" translatable="false">i hope you will find what you want to buy \n press on the instructions button to continue </string>
+    <string name="app_name" translatable="false">ShoeStore</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="login_text1" translatable="false">Email</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="emailHint" translatable="false">example@gmail.com</string>
+    <string name="passwordHint" translatable="false">********</string>
+    <string name="logging" translatable="false">Login</string>
+    <string name="newLogin" translatable="false">Register</string>
+    <string name="welcomeButton">Instructions</string>
+    <string name="InstructionText1">Instructions</string>
+    <string name="InstructionText2" >welcome to our app you must add a unique name to your shoe , all sizes are in Europe style , add a company like adidas or nike or else and in the last you must add description   </string>
+    <string name="InstructionButton">Shoes List</string>
+    <string name="AddFragmentText1">Enter Shoes Specifications</string>
+    <string name="addFragmentShoeName">Shoe Name</string>
+    <string name="addFragmentCompany">Company</string>
+    <string name="addFragmentDiscreption">Description</string>
+    <string name="addFragmentSize">Size</string>
+    <string name="addFragmentCancel" >Cancel</string>
+    <string name="addFragmentSave">Save</string>
+    <string name="cardName">Name :</string>
+    <string name="cardSize" >Size :</string>
+    <string name="cardCompany">Company:</string>
+    <string name="cardDescription">Description:</string>
+</resources>

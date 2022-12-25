@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="shoes"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <!--using constrain layout because it make you free to add item freely in the Layout and make relations between views   -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cardText1"
+                style="@style/CardConstants"
+                android:layout_marginStart="30sp"
+                android:text="@string/cardName"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/cardText2"
+                style="@style/cardVariables"
+                android:textSize="13sp"
+                android:text="@{shoes.name}"
+                app:layout_constraintStart_toEndOf="@+id/cardText1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cardText3"
+                style="@style/CardConstants"
+                android:layout_width="70sp"
+                android:layout_height="27sp"
+                android:layout_marginStart="15sp"
+                android:text="@string/cardSize"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@+id/cardText2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cardText4"
+                style="@style/cardVariables"
+                android:layout_width="90sp"
+                android:layout_height="27sp"
+                android:background="#EBEDF1"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                android:text="@{shoes.size}"
+                app:layout_constraintStart_toEndOf="@+id/cardText3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cardText5"
+                style="@style/CardConstants"
+                android:layout_width="70sp"
+                android:layout_height="27sp"
+                android:text="@string/cardCompany"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/cardText1"
+                app:layout_constraintTop_toBottomOf="@+id/cardText1" />
+
+            <TextView
+                android:id="@+id/cardText6"
+                style="@style/cardVariables"
+                android:layout_width="90sp"
+                android:layout_height="27sp"
+                android:textSize="13sp"
+                android:text="@{shoes.company}"
+                app:layout_constraintStart_toEndOf="@+id/cardText5"
+                app:layout_constraintTop_toBottomOf="@+id/cardText2" />
+
+            <TextView
+                android:id="@+id/cardText7"
+                style="@style/CardConstants"
+                android:layout_width="70sp"
+                android:layout_height="27sp"
+                android:text="@string/cardDescription"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/cardText3"
+                app:layout_constraintTop_toBottomOf="@+id/cardText3" />
+
+            <TextView
+                android:id="@+id/cardText8"
+                style="@style/cardVariables"
+                android:layout_width="90sp"
+                android:layout_height="27sp"
+                android:textSize="13sp"
+                android:text="@{shoes.description}"
+                app:layout_constraintStart_toEndOf="@+id/cardText7"
+                app:layout_constraintTop_toBottomOf="@+id/cardText4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

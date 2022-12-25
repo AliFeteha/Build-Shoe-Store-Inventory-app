@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--using Linear layout because of wanting views to be down by each other as linear layout arrange the views vertically or horizontally -->
+    <LinearLayout
+        android:id="@+id/instructionFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0C34AF"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".InstructionFragment">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/Welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/InstructionText1" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/Welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="@string/InstructionText2" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/Welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:background="#000939"
+            android:text="@string/InstructionButton" />
+    </LinearLayout>
+</layout>

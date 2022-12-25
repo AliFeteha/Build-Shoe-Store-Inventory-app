@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--using constrain layout because it make you free to add item freely in the Layout and make relations between views here i use it because buttons and textViews related with each other   -->
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.models.ShoeslistViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shoeAddFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#566781"
+        tools:context=".ShoeaddFragment">
+        <TextView
+            android:id="@+id/addText"
+            style="@style/loginTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/AddFragmentText1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/ShoeName"
+            style="@style/shoeadd"
+            android:hint="@string/addFragmentShoeName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Company"
+            tools:layout_editor_absoluteX="5dp"
+            app:layout_constraintStart_toStartOf="@+id/addText"
+            app:layout_constraintTop_toBottomOf="@+id/addText"
+            android:text="@={viewModel.shoeItem.name}"/>
+
+        <EditText
+            android:id="@+id/Company"
+            style="@style/shoeadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:background="#FFFFFF"
+            android:ems="5"
+            android:hint="@string/addFragmentCompany"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ShoeName"
+            app:layout_constraintTop_toBottomOf="@+id/addText"
+            android:text="@={viewModel.shoeItem.company}"/>
+
+        <EditText
+            android:id="@+id/Discreption"
+            style="@style/shoeadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:ems="5"
+            android:hint="@string/addFragmentDiscreption"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/ShoeName"
+            app:layout_constraintTop_toBottomOf="@+id/ShoeName"
+            android:text="@={viewModel.shoeItem.description}"/>
+
+        <EditText
+            android:id="@+id/Size"
+            style="@style/shoeadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:hint="@string/addFragmentSize"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Discreption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Discreption"
+            android:text="@={viewModel.shoeItem.size}"/>
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addFragmentCancel"
+            app:layout_constraintEnd_toEndOf="@+id/Discreption"
+            app:layout_constraintStart_toStartOf="@+id/Discreption"
+            app:layout_constraintTop_toBottomOf="@+id/Discreption" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addFragmentSave"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/Size" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

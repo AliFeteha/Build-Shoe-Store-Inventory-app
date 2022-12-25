@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loginFragment2">
+
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.udacity.shoestore.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment2_to_welcomeFragment2"
+            app:destination="@id/welcomeFragment2"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment2"
+        android:name="com.udacity.shoestore.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment2_to_instructionFragment"
+            app:destination="@id/instructionFragment"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="com.udacity.shoestore.InstructionFragment"
+        android:label="fragment_instruction"
+        tools:layout="@layout/fragment_instruction" >
+        <action
+            android:id="@+id/action_instructionFragment_to_shoeslistFragment"
+            app:destination="@id/shoeslistFragment"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeslistFragment"
+        android:name="com.udacity.shoestore.ShoeslistFragment"
+        android:label="fragment_shoeslist"
+        tools:layout="@layout/fragment_shoeslist" >
+        <action
+            android:id="@+id/action_shoeslistFragment_to_shoesaddFragment"
+            app:destination="@id/shoesaddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoesaddFragment"
+        android:name="com.udacity.shoestore.ShoesaddFragment"
+        android:label="ShoesaddFragment"
+        tools:layout="@layout/fragment_shoesadd">
+        <action
+            android:id="@+id/action_shoesaddFragment_to_shoeslistFragment"
+            app:destination="@id/shoeslistFragment"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
